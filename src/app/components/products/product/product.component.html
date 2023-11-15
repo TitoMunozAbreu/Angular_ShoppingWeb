@@ -1,0 +1,14 @@
+<div class="card h-100">
+    <img
+    [src]="product?.image" 
+    class="card-img-top image-fluid rounded" 
+    [alt]="product?.image">
+    <div class="card-body">
+    <h5 class="card-title">{{ product?.title }}</h5>
+    <p class="card-text">{{ product?.description }}</p>
+    <p class="card-text price"><strong>{{ product?.price| currency: 'EUR' }}</strong></p>
+</div>
+
+ 
+
+
