@@ -8,6 +8,10 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent },
   {path: 'mens-clothing', component: ProductsComponent },
+  {path: 'mens-clothing', component: ProductsComponent },
+  {path: 'womens-clothing', component: ProductsComponent },
+  {path: 'electronics', component: ProductsComponent },
+  {path: 'jewelery', component: ProductsComponent },
   {path: 'pageNotFound', component: PageNotFoundComponent },
   {path: '**', redirectTo: 'pageNotFound'}
 

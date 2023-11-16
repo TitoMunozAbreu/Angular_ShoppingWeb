@@ -10,18 +10,19 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsComponent implements OnInit{
 
   products?: Product[]
-  title = `Men's clothing`
+  title?: string 
   
   constructor(private productService: ProductService){}
   
   ngOnInit(): void {
-    this.findByCategory(`men's clothing`);
+    this.findByCategory();
+    this.title = this.productService.category
   }
 
   
-  findByCategory(category:string) {
+  findByCategory() {
     //utilizamos el servicio para almacenar la lista de productos
-    this.productService.findByCategory(category)
+    this.productService.findByCategory()
     .subscribe({
       next: value => {
         this.products = value    

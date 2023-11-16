@@ -10,7 +10,16 @@
             <a  routerLink="/" class="nav-link">Home</a>
           </li>
           <li class="nav-item" routerLinkActive="active"> 
-            <a [routerLink]="['/mens-clothing']" class="nav-link">Men Clothing</a>
+            <a [routerLink]="['/mens-clothing']" class="nav-link" (click)="onUpdateCategory('mens')">Men Clothing</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active"> 
+            <a [routerLink]="['/womens-clothing']" class="nav-link" (click)="onUpdateCategory('womens')">Women Clothing</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active"> 
+            <a [routerLink]="['/electronics']" class="nav-link" (click)="onUpdateCategory('electronics')">Electronics</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active"> 
+            <a [routerLink]="['/jewelery']" class="nav-link" (click)="onUpdateCategory('jewelery')">Jewelery</a>
           </li>
         </ul>
       </div>
