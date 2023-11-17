@@ -10,16 +10,10 @@ const   baseUrl = 'https://fakestoreapi.com/products/category';
 })
 export class ProductService {
 
-  category?: string;
-
   constructor(private http:HttpClient) { }
 
-  findByCategory() : Observable<Product[]>{
-    return this.http.get<Product[]>(`${baseUrl}/${this.category}`);
-  }
-
-  updateCategory(c: string){
-    this.category = c
+  findByCategory(category:string) : Observable<Product[]>{
+    return this.http.get<Product[]>(`${baseUrl}/${category}`);
   }
 
 }

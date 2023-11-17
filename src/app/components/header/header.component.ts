@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -6,24 +6,12 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent  {
+export class HeaderComponent implements OnInit{
   
   imageLogo:string = 'assets/images/papaya-logo.jpeg';
 
-  constructor(private productService: ProductService){}
+  constructor(){}
 
-  onUpdateCategory(category: string){
-    if(category === 'mens'){
-      this.productService.updateCategory(`men's clothing`);
-    } else if(category === 'womens'){
-      this.productService.updateCategory(`women's clothing`);
-    }else {
-      this.productService.updateCategory(category);
-    }
-    
-   
-  }
-
-  
+  ngOnInit(): void {}
   
 }
